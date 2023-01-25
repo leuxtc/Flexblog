@@ -171,7 +171,8 @@ img {
 .preco-item {
     flex: 1 1 260px;
     padding: 20px;
-    margin: 0px 10px;
+    margin: 10px auto;
+    max-width: 300px;
 }
 
 .preco-item h2 {
@@ -199,7 +200,7 @@ img {
     justify-content: space-between;
     align-items: center;
     font-style: italic;
-    margin: 20px 0px;
+    margin: 20px auto;
     color: #a4a4a4;
 }
 
@@ -215,9 +216,106 @@ img {
     display: block;
     text-align: center;
     font-weight: bold;
-    font-variant-caps: all-small-caps;
-    font-size: 3em;
-    padding: 10px;
-    color: #222;
+    text-transform: uppercase;
+    font-size: 2.25em;
+    padding: 15px 0;
+    color: #222222;
     border: solid 5px #222;
+}
+
+@media (max-width: 800px) {
+    .preco {
+        padding: 0 10px;
+    }
+}
+
+/* Qualidade */
+
+.qualidade {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.qualidade-item {
+    flex: 1 1 300px;
+    padding: 10px;
+    margin: 10px 10px 0 0;
+}
+
+.qualidade-item h2 {
+    font-size: 2.25em;
+    margin-bottom: 20px;
+    color: #a4a4a4;
+}
+
+.qualidade-item h2::before {
+    content:'';
+    display: inline-block;
+    height: 30px;
+    padding-right: 10px;
+    border-left: solid 8px red;
+}
+
+.qualidade-item p {
+    color: #222;
+    font-size: 1.25rem;
+}
+
+/* Newsletter */
+
+.newsletter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 960px;
+    margin: 100px auto;
+}
+
+.newsletter-info {
+    flex: 1 1 100px; 
+}
+
+.newsletter-info h1 {
+    color: #a4a4a4;
+}
+
+.newsletter-info p {
+    color: #7c7c7c;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex: 1 1 100px;
+    background-color: #2c70ff;
+}
+
+.newsletter-form input {
+    font-style: italic;
+    font-size: 1.25em;
+    margin: 3px;
+    padding: 10px;
+}
+
+.newsletter-form button {
+    padding: 10px;
+    font-size: 2.25em;
+    text-transform: uppercase;
+    color: white;
+    background-color: #2c70ff;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+.footer {
+    padding: 60px;
+    text-align: center;
+    font-size: 3em;
+    background-color: #2c70ff;
 }
